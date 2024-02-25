@@ -2,13 +2,12 @@
   "name": "javascript-exercices",
   "version": "1.0.0",
   "description": "",
-  "main": "combinaison.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "dev":"tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Benjamin AUBRON",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.4.1"
