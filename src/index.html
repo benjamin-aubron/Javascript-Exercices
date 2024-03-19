@@ -27,28 +27,45 @@
   
   <h1 class="text-6xl text-center text-slate-200 font-bold pt-20">Javascript Exercices</h1>
   
-  <!-- SECTION NAME -->
-  <section class="bg-slate-800 mt-20 mx-4 md:mx-20 xl:mx-80 p-4 rounded-lg border border-slate-500">
-      <h2 class="text-4xl p-4 font-semibold text-slate-200">Number of parameters to be checked</h2>
-      <p class="p-4 text-slate-400 text-xl">
-          In medicine, when a person undergoes a treatment, it is crucial to determine the number of different types of pills they consume daily to prevent potential side effects. Indeed, the various molecules contained in the pills may interact with each other, necessitating a thorough analysis of the impact of each. For instance, if a person takes three pills a day (pill A, pill B, and pill C), scientists must understand the behavior of each pill individually, including pill A alone, pill B alone, pill C alone, the combination of pills A and B, pills A and C, pills B and C, and the combination of pills A, B, and C. This entails analyzing a total of seven combinations before ensuring the person that the treatment is safe.
-      </p>
-      <p class="px-4 text-slate-400 text-xl">
-          The number of parameters to be checked grows exponentially with the number of different molecules. Below is a calculator to determine the number of combinations based on the number of different molecules.
-      </p>
-  
-      <form class="pt-4 text-slate-400 text-xl">
-          <label class="pl-4 font-medium" for="parameters">Number of different molecules:</label>
-          <input class="p-3 ml-4 bg-gray-900 w-36 rounded-lg focus:outline-none" type="number" placeholder="enter a number" id="parameters">
-  
-          <button class="py-3 px-4 ml-4 font-semibold rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-200 " type="submit">Calculate all the combinaisons</button>
-      </form>
+  <!-- Medicine, number of parameters to check -->
+    <section class="bg-slate-800 mt-20 mx-4 md:mx-20 xl:mx-80 p-4 rounded-lg border border-slate-600">
+        <h2 class="text-4xl p-4 font-semibold text-slate-200">Number of parameters to be checked</h2>
+        <p class="p-4 text-slate-400 text-xl">
+            In medicine, when a person undergoes a treatment, it is crucial to determine the number of different types of pills they consume daily to prevent potential side effects. Indeed, the various molecules contained in the pills may interact with each other, necessitating a thorough analysis of the impact of each. For instance, if a person takes three pills a day (pill A, pill B, and pill C), scientists must understand the behavior of each pill individually, including pill A alone, pill B alone, pill C alone, the combination of pills A and B, pills A and C, pills B and C, and the combination of pills A, B, and C. This entails analyzing a total of seven combinations before ensuring the person that the treatment is safe.
+        </p>
+        <p class="px-4 text-slate-400 text-xl">
+            The number of parameters to be checked grows exponentially with the number of different molecules. Below is a calculator to determine the number of combinations based on the number of different molecules.
+        </p>
 
-      <div class="p-4 text-slate-400 font-medium text-xl">Result : <span class="result font-bold text-slate-100 text-2xl">0</span> combinaisons</div>
-  
-      <script src="combinaison.js"></script>
-      
-  </section>
+        <form class="pt-4 text-slate-400 text-xl">
+            <label class="pl-4 font-medium" for="parameters">Number of different molecules:</label>
+            <input class="p-3 ml-4 bg-gray-900 w-44 rounded-lg focus:outline-none text-slate-200" type="number" placeholder="enter a number" id="parameters">
+
+            <button class="py-3 px-4 ml-4 font-semibold rounded-lg bg-sky-600 hover:bg-sky-500 text-slate-200 " type="submit">Calculate all the combinaisons</button>
+        </form>
+
+        <div class="p-4 text-slate-400 font-medium text-xl">Result : <span class="result font-bold text-slate-100 text-2xl">0</span> combinaisons</div>
+
+        <script src="combinaison.js"></script>
+        
+    </section>
+
+    <!-- Calcul d'IMC -->
+    <section class="bg-slate-800 mt-20 mx-4 md:mx-20 xl:mx-80 p-4 rounded-lg border border-slate-600">
+        <h2 class="text-4xl p-4 font-semibold text-slate-200">Calcul <span class="font-bold">d'IMC</span></h2>
+
+        <form class="pt-4 text-slate-400 text-xl">
+            <label class="pl-4 font-medium" for="parameters">Number of different molecules:</label>
+            <input class="p-3 ml-4 bg-gray-900 w-44 rounded-lg focus:outline-none text-slate-200" type="number" placeholder="enter a number" id="parameters">
+
+            <button class="py-3 px-4 ml-4 font-semibold rounded-lg bg-sky-600 hover:bg-sky-500 text-slate-200 " type="submit">Calculate all the combinaisons</button>
+        </form>
+
+        <div class="p-4 text-slate-400 font-medium text-xl">Result : <span class="result font-bold text-slate-100 text-2xl">0</span> combinaisons</div>
+
+        <script src="combinaison.js"></script>
+        
+    </section>
   
   <!-- FOOTER -->
   <footer></footer>
