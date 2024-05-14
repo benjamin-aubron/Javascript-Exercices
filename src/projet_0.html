@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine combination</title>
+  <meta name="description" content="Description here">
+  <link rel="icon" href="">
+
+  <!-- Tailwind -->
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="bg-slate-900">
+  <nav class="fixed top-0 bg-slate-800 w-full h-20 flex items-center border-b border-slate-600">
+    <a href="index.html" class="ml-4 bg-slate-600 hover:bg-slate-700 rounded-full group ">
+      <svg xmlns="http://www.w3.org/2000/svg" class="size-10 pr-1 text-slate-400 group-hover:text-slate-400" viewBox="0 0 512 512"><path fill="currentColor" d="M321.94 98L158.82 237.78a24 24 0 0 0 0 36.44L321.94 414c15.57 13.34 39.62 2.28 39.62-18.22v-279.6c0-20.5-24.05-31.56-39.62-18.18"/></svg>
+    </a>
+    <h1 class="text-3xl text-slate-200 ml-4">Projet 0 - Medicine combination</h1>
+  </nav>
+  
+  <section class="bg-slate-800 mx-4 md:mx-20 xl:mx-80 mt-32 mb-12 rounded-lg border border-slate-600">
+    <h2 class="text-4xl p-4 font-semibold text-slate-200">Number of parameters to be checked</h2>
+    <p class="p-4 text-slate-400 text-xl">
+        In medicine, when a person undergoes a treatment, it is crucial to determine the number of different types of pills they consume daily to prevent potential side effects. Indeed, the various molecules contained in the pills may interact with each other, necessitating a thorough analysis of the impact of each. For instance, if a person takes three pills a day (pill A, pill B, and pill C), scientists must understand the behavior of each pill individually, including pill A alone, pill B alone, pill C alone, the combination of pills A and B, pills A and C, pills B and C, and the combination of pills A, B, and C. This entails analyzing a total of seven combinations before ensuring the person that the treatment is safe.
+    </p>
+    <p class="px-4 text-slate-400 text-xl">
+        The number of parameters to be checked grows exponentially with the number of different molecules. Below is a calculator to determine the number of combinations based on the number of different molecules.
+    </p>
+
+    <form class="pt-4 text-slate-400 text-xl space-y-2">
+        <label class="pl-4 font-medium" for="parameters">Number of different molecules:</label>
+        <div class="space-y-3">
+          <input class="p-3 ml-4 bg-gray-900 w-44 rounded-lg focus:outline-none text-slate-200" type="number" placeholder="enter a number" id="parameters">
+  
+          <button class="py-3 px-4 ml-4 font-semibold rounded-lg bg-sky-600 hover:bg-sky-500 text-slate-200 " type="submit">Calculate all the combinaisons</button>
+        </div>
+    </form>
+
+    <div class="p-4 text-slate-400 font-medium text-xl">Result : <span class="result font-bold text-slate-100 text-2xl">0</span> combinaisons</div>
+
+    <script src="projet0.js"></script>
+    
+</section>
+
+</body>
+</html>
