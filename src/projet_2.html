@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizz</title>
+  <meta name="description" content="Description here">
+  <link rel="icon" href="">
+
+  <!-- Tailwind -->
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="fixed top-0 w-full h-20 flex items-center bg-white border-b border-slate-600 z-10">
+    <a href="index.html" class="ml-4 bg-slate-400 hover:bg-slate-500 rounded-full group ">
+      <svg xmlns="http://www.w3.org/2000/svg" class="size-10 pr-1 text-slate-200" viewBox="0 0 512 512"><path fill="currentColor" d="M321.94 98L158.82 237.78a24 24 0 0 0 0 36.44L321.94 414c15.57 13.34 39.62 2.28 39.62-18.22v-279.6c0-20.5-24.05-31.56-39.62-18.18"/></svg>
+    </a>
+    <h1 class="text-3xl ml-4">Projet 2 - Quizz</h1>
+  </nav>
+
+  <section class="bg-[#d0dff4] pt-32 pb-16 px-6">
+    <h1 class="text-[40px] text-center pb-8" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><span class="font-bold mr-3">Quizz</span>Culture générale ☑️</h1>
+
+    <form class="space-y-8">
+      <div class="flex flex-col mx-auto p-4 text-xl bg-[#f1f1f1] w-auto lg:w-[800px] rounded-md drop-shadow-xl space-y-1">
+        <h2 class="text-2xl font-medium mb-2">Qui est sacré empereur de France le 2 décembre 1804 ?</h2>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="clovis" name="q1" value="a" class="size-4">
+          <label for="clovis">Clovis</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="lincoln" name="q1" value="b" class="size-4">
+          <label for="lincoln">Abraham Lincoln</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="napoleon" name="q1" value="c" class="size-4">
+          <label for="napoleon">Napoléon Bonaparte</label>
+        </div>
+      </div>
+
+      <div class="flex flex-col mx-auto p-4 text-xl bg-[#f1f1f1] w-auto lg:w-[800px] rounded-md drop-shadow-xl space-y-1">
+        <h2 class="text-2xl font-medium mb-2">Quand la déclaration d'indépendance des États-Unis a-t-elle été votée&nbsp;?</h2>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="date1" name="q2" value="a" class="size-4">
+          <label for="date1">4 Juillet 1776</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="date2" name="q2" value="b" class="size-4">
+          <label for="date2">18 Avril 1856</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="date3" name="q2" value="c" class="size-4">
+          <label for="date3">30 Juin 1925</label>
+        </div>
+      </div>
+
+      <div class="flex flex-col mx-auto p-4 text-xl bg-[#f1f1f1] w-auto lg:w-[800px] rounded-md drop-shadow-xl space-y-1">
+        <h2 class="text-2xl font-medium mb-2">Quand a eu lieu la chute de l'empire romain d'occident&nbsp;?</h2>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="date4" name="q3" value="a" class="size-4">
+          <label for="date4">15 EC</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="date5" name="q3" value="b" class="size-4">
+          <label for="date5">476 EC</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="date6" name="q3" value="c" class="size-4">
+          <label for="date6">-740 AEC</label>
+        </div>
+      </div>
+
+      <div class="flex flex-col mx-auto p-4 text-xl bg-[#f1f1f1] w-auto lg:w-[800px] rounded-md drop-shadow-xl space-y-1">
+        <h2 class="text-2xl font-medium mb-2">Quelle est la capitale de la Slovénie&nbsp;?</h2>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="ljublijana" name="q4" value="a" class="size-4">
+          <label for="ljublijana">Ljublijana</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="belgrade" name="q4" value="b" class="size-4">
+          <label for="belgrade">Belgrade</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="bratislava" name="q4" value="c" class="size-4">
+          <label for="bratislava">Bratislava</label>
+        </div>
+      </div>
+
+      <div class="flex flex-col mx-auto p-4 text-xl bg-[#f1f1f1] w-auto lg:w-[800px] rounded-md drop-shadow-xl space-y-1">
+        <h2 class="text-2xl font-medium mb-2">Combien d'habitants compte l'Irlande en 2020&nbsp;?</h2>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="m1" name="q5" value="a" class="size-4">
+          <label for="m1">1,3 Million</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="m2" name="q5" value="b" class="size-4">
+          <label for="m2">21 Millons</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="radio" id="m3" name="q5" value="c" class="size-4">
+          <label for="m3">4,9 Millions</label>
+        </div>
+      </div>
+
+      <button type="submit" class="flex mx-auto justify-center bg-white drop-shadow-xl py-3 px-8 text-xl rounded-md">VALIDER ✔️</button>
+    </form>
+
+    <div class="flex flex-col mx-auto p-4 text-xl bg-[#f1f1f1] w-auto lg:w-[800px] rounded-md drop-shadow-xl mt-8 mb-8 text-center space-y-3">
+      <div>Il reste quelques erreurs.</div>
+      <div>Score : <span class="font-semibold">2</span><span class="font-semibold"> / 5</span></div>
+      <div>Retentez une autre réponse dans les cases rouges, puis re-validez !</div>
+    </div>
+
+  </section>
+
+</body>
+</html>
