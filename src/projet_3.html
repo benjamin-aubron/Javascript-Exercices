@@ -18,24 +18,20 @@
     <h1 class="text-3xl ml-4">Projet 3 - Recherche avec l'API de Wikipédia</h1>
   </nav>
 
-  <section class="flex flex-col items-center pt-32 bg-[#f1f1f1] min-h-full px-8">
+  <section class="flex flex-col items-center pt-32 pb-20 bg-[#f1f1f1] min-h-full px-8">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Wikipedia_logo_v3.svg/1024px-Wikipedia_logo_v3.svg.png" alt="Sphère Wikipédia" class="size-60">
     <h1 class="text-4xl sm:text-5xl text-gray-800 mt-8 mb-6">Recherche <span class="font-bold">Wikipedia</span></h1>
     <form class="w-full md:w-[600px]">
       <input type="text" placeholder="Recherchez un terme" class="w-full text-xl p-3 drop-shadow-lg rounded-md">
     </form>
-    <div class="error-msg text-xl mb-10">Help message</div>
-    <div class="results-display flex flex-col w-full md:w-[600px] space-x-1">
-      <a href="" class="text-blue-700 underline text-3xl font-bold">Text</a>
-      <a href="" class="text-green-600">Url Lorem, ipsum dolor.</a>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quas sequi dolore soluta eius eligendi numquam, quia laboriosam consequuntur officia quisquam beatae a facere recusandae.</p>
+    <div class="error-msg text-xl mb-10"></div>
+    <div class="results-display flex flex-col w-full md:w-[600px] space-y-1">
     </div>
 
-    <div class="loader">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+    <div class="loader hidden space-x-2">
+      <svg class="animate-spin size-8 border-4 border-black border-dashed rounded-full" viewBox="0 0 24 24"></svg>
     </div>
+
   </section>
   
   <script src="projet_3.js"></script>
