@@ -46,6 +46,9 @@ function createCookie(newCookie) {
   document.cookie = `${encodeURIComponent(newCookie.name)}=${encodeURIComponent(
     newCookie.value
   )}; expires=${newCookie.expires.toUTCString()}`;
+  if (cookieList.children.length) {
+    displayCookies()
+  }
 }
 
 function doesCookieExist(name) {
@@ -70,4 +73,53 @@ function createToast({ name, state, color }) {
   setTimeout(() => {
     toastInfo.remove();
   }, 2500);
+}
+
+const cookieList = document.querySelector(".cookie-list");
+const displayCookieBtn = document.querySelector(".display-cookie-btn");
+const infoTxt = document.querySelector(".info-txt");
+
+displayCookieBtn.addEventListener("click", displayCookies);
+
+let lock = false;
+function displayCookies() {
+  if (cookieList.children.length) cookieList.textContent = "";
+
+  const cookies = document.cookie.replace(/\s/g, "").split(";");
+
+  if (!cookies[0]) {
+    if (lock) return;
+
+    lock = true;
+    infoTxt.textContent = "Pas de cookies à afficher";
+    infoTxt.style.display = "flex";
+
+    setTimeout(() => {
+      infoTxt.style.display = "";
+      lock = false;
+    }, 1500);
+    return;
+  }
+
+  createCookieCards(cookies);
+}
+
+function createCookieCards(cookie) {
+  cookie.forEach((cookie) => {
+    const formatCookie = cookie.split("=");
+    const cards = document.createElement("div");
+    cards.className =
+      "relative bg-[#f1f1f1] drop-shadow-md p-4 rounded-lg text-xl";
+    cards.innerHTML = `
+    <p>Name : ${decodeURIComponent(formatCookie[0])} </p>
+    <p>Valeur : ${decodeURIComponent(formatCookie[1])} </p>
+    <button class="absolute justify-center top-2 right-2 px-[7px]  rounded bg-red-600 text-white content-center">X</button>
+    `;
+    cards.querySelector("button").addEventListener("click", (e) => {
+      createToast({name: decodeURIComponent(formatCookie[0]), state: "deleted", color: "crimson" });
+      document.cookie = `${formatCookie[0]}=; expires=${new Date(0)}`;
+      e.target.parentElement.remove();
+    });
+    cookieList.appendChild(cards);
+  });
 }
