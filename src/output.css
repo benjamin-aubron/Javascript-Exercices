@@ -578,6 +578,10 @@ video {
   }
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .fixed {
   position: fixed;
 }
@@ -588,10 +592,6 @@ video {
 
 .relative {
   position: relative;
-}
-
-.bottom-10 {
-  bottom: 2.5rem;
 }
 
 .bottom-\[20px\] {
@@ -614,16 +614,8 @@ video {
   top: 0.5rem;
 }
 
-.bottom-20 {
-  bottom: 5rem;
-}
-
-.left-\[50\%\] {
-  left: 50%;
-}
-
-.left-\[w-50\%\] {
-  left: w-50%;
+.right-0 {
+  right: 0px;
 }
 
 .z-10 {
@@ -668,11 +660,6 @@ video {
   margin-bottom: 1rem;
 }
 
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
-
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -683,6 +670,14 @@ video {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .mb-6 {
@@ -715,18 +710,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mb-20 {
-  margin-bottom: 5rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.mb-80 {
-  margin-bottom: 20rem;
 }
 
 .line-clamp-5 {
@@ -777,29 +760,37 @@ video {
   height: 2rem;
 }
 
-.size-28 {
-  width: 7rem;
-  height: 7rem;
+.size-0 {
+  width: 0px;
+  height: 0px;
 }
 
 .h-20 {
   height: 5rem;
 }
 
+.h-56 {
+  height: 14rem;
+}
+
 .h-\[100vh\] {
   height: 100vh;
 }
 
-.h-\[400px\] {
-  height: 400px;
+.h-full {
+  height: 100%;
 }
 
-.min-h-full {
-  min-height: 100%;
+.h-0 {
+  height: 0px;
 }
 
 .min-h-\[400px\] {
   min-height: 400px;
+}
+
+.min-h-full {
+  min-height: 100%;
 }
 
 .w-28 {
@@ -822,6 +813,14 @@ video {
   width: 100%;
 }
 
+.w-\[100\%\] {
+  width: 100%;
+}
+
+.w-0 {
+  width: 0px;
+}
+
 .min-w-\[150px\] {
   min-width: 150px;
 }
@@ -834,6 +833,10 @@ video {
 
 .animate-spin {
   animation: spin 1s linear infinite;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .grid-cols-2 {
@@ -948,6 +951,10 @@ video {
 
 .border-4 {
   border-width: 4px;
+}
+
+.border-2 {
+  border-width: 2px;
 }
 
 .border-b {
@@ -1082,6 +1089,10 @@ video {
   padding: 1rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .p-\[10px\] {
   padding: 10px;
 }
@@ -1119,11 +1130,6 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
 }
 
 .pb-16 {
@@ -1393,6 +1399,10 @@ video {
 @media (min-width: 1024px) {
   .lg\:w-\[340px\] {
     width: 340px;
+  }
+
+  .lg\:w-\[600px\] {
+    width: 600px;
   }
 
   .lg\:w-\[800px\] {
