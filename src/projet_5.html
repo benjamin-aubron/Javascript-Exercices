@@ -19,13 +19,17 @@
   </nav>
 
   <section class="pt-48 pb-20 px-8 min-h-full bg-[#1f47aa]">
-    <div class="mx-auto bg-[#f2f1f2] p-12 w-full lg:w-[340px] rounded-lg drop-shadow-xl">
-      <h1 class="text-5xl text-center">Lieux</h1>
-      <div class="text-xl text-center mb-10">Pays</div>
-      <div class="text-6xl text-center font-semibold py-2">10°</div>
-      <div class="flex mx-auto text-6xl justify-center">☁️</div>
+    <div class="mx-auto bg-white py-10 px-4 w-full lg:w-[340px] rounded-lg drop-shadow-xl min-h-[400px]">
+      <h1 class="place text-5xl text-center mb-4"></h1>
+      <div class="country text-xl text-center"></div>
+      <div class="temperature text-6xl text-center font-semibold py-2"></div>
+      <div class="icon"></div>
+      <div class="loader flex mx-auto justify-center" style="transition: visibility 0.4s ease-out, opacity 0.4s ease-out ;">
+        <img src="loader.svg" alt="loader">
+      </div>
+      <div class="error-information text-center"></div>
     </div>
   </section>
-  <script src="projet_4.js"></script>
+  <script src="projet_5.js"></script>
 </body>
 </html>
