@@ -19,12 +19,12 @@
   </nav>
 
   <section class="pt-48 pb-20 px-8 min-h-full">
-    <div class="flex mx-auto w-full md:w-[600px] border-2 rounded-xl">
-      <label for="color1" class="block w-full p-6 text-xl cursor-pointer">#FF5F6D</label>
+    <div class="flex mx-auto w-full md:w-[600px]">
+      <label for="color1" class="label block w-full p-6 text-xl cursor-pointer border-2 rounded-xl">#FF5F6D</label>
       <input type="color" id="color1" class="invisible size-0">
     </div>
-    <div class="flex mx-auto w-full md:w-[600px] border-2 rounded-xl mt-3">
-      <label for="color2" class="block w-full p-6 text-xl cursor-pointer">#FFC371</label>
+    <div class="flex mx-auto w-full md:w-[600px] mt-3">
+      <label for="color2" class="label block w-full p-6 text-xl cursor-pointer border-2 rounded-xl">#FFC371</label>
       <input type="color" id="color2" class="invisible size-0">
     </div>
     <div class="flex flex-col mx-auto w-full md:w-[600px] mt-6 space-y-3">
@@ -32,7 +32,7 @@
       <input type="range" id="orientation" min="0" max="360" value="90" class="inp-range">
     </div>
     <div class="flex mx-auto w-full md:w-[600px] justify-center mt-6">
-      <button type="button" class="copy-btn bg-white border-2 w-36 py-2 mx-4 rounded-xl shadow-md">Copier</button>
+      <button type="button" class="copy-btn relative bg-white border-2 w-36 py-2 mx-4 rounded-xl shadow-md after:content-['Copié!'] after:block after:absolute after:z-10 after:bg-white after:px-4 after:py-2 after:rounded-md after:shadow-md after:border-2 after:left-2/4 after:-bottom-[60] after:-translate-x-2/4 after:opacity-0 after:transition-opacity after:ease-in-out">Copier</button>
       <button type="button" class="random-btn bg-white border-2 w-36 py-2 mx-4 rounded-xl shadow-md">Aléatoire</button>
     </div>
 
