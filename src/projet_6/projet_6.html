@@ -19,22 +19,21 @@
   </nav>
 
   <section class="pt-48 pb-20 px-8 min-h-full">
-    <div class="flex mx-auto w-full lg:w-[600px] border-2 rounded-xl">
+    <div class="flex mx-auto w-full md:w-[600px] border-2 rounded-xl">
       <label for="color1" class="block w-full p-6 text-xl cursor-pointer">#FF5F6D</label>
       <input type="color" id="color1" class="invisible size-0">
     </div>
-    <div class="flex mx-auto w-full lg:w-[600px] border-2 rounded-xl">
+    <div class="flex mx-auto w-full md:w-[600px] border-2 rounded-xl mt-3">
       <label for="color2" class="block w-full p-6 text-xl cursor-pointer">#FFC371</label>
       <input type="color" id="color2" class="invisible size-0">
     </div>
-    <div>
-      <span></span>
-      <label >Orientation: <span class="orientation-value">90</span></label>
+    <div class="flex flex-col mx-auto w-full md:w-[600px] mt-6 space-y-3">
+      <label class="bg-white border-2 w-fit px-3 py-1">Orientation: <span class="orientation-value">90°</span></label>
       <input type="range" id="orientation" min="0" max="360" value="90" class="inp-range">
     </div>
-    <div>
-      <button type="button" class="copy-btn">Copier</button>
-      <button type="button" class="random-btn">Aléatoire</button>
+    <div class="flex mx-auto w-full md:w-[600px] justify-center mt-6">
+      <button type="button" class="copy-btn bg-white border-2 w-36 py-2 mx-4 rounded-xl shadow-md">Copier</button>
+      <button type="button" class="random-btn bg-white border-2 w-36 py-2 mx-4 rounded-xl shadow-md">Aléatoire</button>
     </div>
 
   </section>
