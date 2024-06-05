@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation de données</title>
+    <meta name="description" content="Description here">
+    <link rel="icon" href="">
+  
+    <!-- Tailwind -->
+    <link href="../output.css" rel="stylesheet">
+  </head>
+  
+<body class="bg-gradient-to-r from-[#c596b4] to-[#fffbde]">
+  <nav class="fixed top-0 w-full h-20 flex items-center bg-white border-b border-slate-600 z-10">
+    <a href="../index.html" class="ml-4 bg-slate-400 hover:bg-slate-500 rounded-full group ">
+      <svg xmlns="http://www.w3.org/2000/svg" class="size-10 pr-1 text-slate-200" viewBox="0 0 512 512"><path fill="currentColor" d="M321.94 98L158.82 237.78a24 24 0 0 0 0 36.44L321.94 414c15.57 13.34 39.62 2.28 39.62-18.22v-279.6c0-20.5-24.05-31.56-39.62-18.18"/></svg>
+    </a>
+    <h1 class="text-3xl ml-4">Projet 8 - Validation de données</h1>
+  </nav>
+
+  <section class="pt-48 pb-20 px-8 min-h-full">
+    <div class="bg-[#212022] w-full md:w-[600px] mx-auto p-6 rounded-md">
+      <h1 class="text-3xl font-medium text-center text-gray-100 mb-8">Inscrivez-vous</h1>
+      <form>
+        <div class="my-4">
+          <label for="name" class="text-gray-200 text-lg">Nom d'utilisateur</label>
+          <div class="flex items-center justify-between">
+            <input type="text" placeholder="3 caractères minimum" id="name" autocomplete="off" class="w-full focus:outline-none placeholder:text-gray-400 text-gray-200 bg-[#212022]">
+            <img src="check.svg" alt="" class="p-1 size-10">
+          </div>
+          <hr class="border-gray-400">
+          <p class="errorName text-red-400 text-sm mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, impedit?</p>
+        </div>
+        <div class="my-4">
+          <label for="email" class="text-gray-200 text-lg">Email</label>
+          <div class="flex items-center justify-between">
+            <input type="email" placeholder="Votre email" id="email" autocomplete="off" class="w-full focus:outline-none placeholder:text-gray-400 text-gray-200 bg-[#212022]">
+            <img src="check.svg" alt="" class="p-1 size-10">
+          </div>
+          <hr class="border-gray-400">
+          <p class="errorName text-red-400 text-sm mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia fuga aliquam vero.</p>
+        </div>
+        <div class="my-4">
+          <label for="mdp" class="text-gray-200 text-lg">Mot de passe</label>
+          <div class="flex items-center justify-between">
+            <input type="password" placeholder="Votre mot de passe" id="mdp" autocomplete="off" class="w-full focus:outline-none placeholder:text-gray-400 text-gray-200 bg-[#212022]">
+            <img src="check.svg" alt="" class="p-1 size-10">
+          </div>
+          <hr class="border-gray-400">
+          <p class="errorName text-gray-400 text-sm my-2">Au moins un symbole, un chiffre ainsi que 6 caractères minimum</p>
+          <div class="flex items-center justify-center space-x-2 mt-3">
+            <div>
+              <p class="bg-[#c95c22] w-[120px] h-1 rounded-md"></p>
+              <p class="text-gray-200 text-center">faible</p>
+            </div>
+            <div>
+              <p class="bg-[#f5e87a] w-[120px] h-1 rounded-md"></p>
+              <p class="text-gray-200 text-center">moyen</p>
+            </div>
+            <div>
+              <p class="bg-[#24dc23] w-[120px] h-1 rounded-md"></p>
+              <p class="text-gray-200 text-center">fort</p>
+            </div>
+          </div>
+        </div>
+        <div class="my-4">
+          <label for="confirmpsd" class="text-gray-200 text-lg">Confirmer le mot de passe</label>
+          <div class="flex items-center justify-between">
+            <input type="text" placeholder="Confirmer votre mot de passe" id="confirmpsd" autocomplete="off" class="w-full focus:outline-none placeholder:text-gray-400 text-gray-200 bg-[#212022]">
+            <img src="check.svg" alt="" class="p-1 size-10">
+          </div>
+          <hr class="border-gray-400">
+          <p class="errorName text-red-400 text-sm mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, impedit?</p>
+        </div>
+        <button type="submit" class="flex bg-[#fffcde] text-lg rounded-md px-4 py-2 mx-auto">Création du compte</button>
+      </form>
+    </div>
+  </section>
+  <script src="projet_8.js"></script>
+</body>
+</html>
