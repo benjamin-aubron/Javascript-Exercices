@@ -24,12 +24,12 @@
       <label for="search" class="block max-w-[800px] text-lg mx-auto mt-10">Votre recherche</label>
       <input type="text" name="search" id="search" autocomplete="off" class="flex w-full max-w-[800px] rounded shadow-md mt-1 mx-auto h-8">
     </form>
-      <div class="images-list grid grid-cols-3 gap-4">
+      <div class="images-list grid md:grid-cols-2 lg:grid-cols-3 auto-rows-[250px] max-w-[800px] mx-auto gap-2">
 
       </div>
-      <p class="error-msg hidden">Whoops, something went wrong !!!</p>
+      <p class="error-msg flex max-w-[800px] text-lg justify-center mx-auto">Whoops, something went wrong !!!</p>
       <div class="infinite-marker"></div>
-      <button class="absolute bottom-10 right-10 size-14 p-3 border-[1px] border-black rounded-full">
+      <button class="fixed bottom-10 right-10 size-14 p-3 border-[1px] border-black rounded-full">
         <img src="arrow.svg" alt="Arrow up">
       </button>
   </section>
