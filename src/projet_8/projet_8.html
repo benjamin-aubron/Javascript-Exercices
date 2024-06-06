@@ -18,61 +18,80 @@
     <h1 class="text-3xl ml-4">Projet 8 - Validation de données</h1>
   </nav>
 
-  <section class="pt-48 pb-20 px-8 min-h-full">
-    <div class="bg-[#212022] w-full md:w-[600px] mx-auto p-6 rounded-md">
+  <section class="pt-48 px-8 min-h-full">
+    <div class="container bg-[#212022] w-full md:w-[600px] mx-auto p-6 rounded-md">
+      <style>
+        .container.shake{
+          animation: shake 0.4s;
+        }
+        @keyframes shake{
+          33% {
+            transform: translateX(-5px);
+          }
+          66% {
+            transform: translateX(5px);
+          }
+        }
+      </style>
       <h1 class="text-3xl font-medium text-center text-gray-100 mb-8">Inscrivez-vous</h1>
       <form>
-        <div class="my-4">
+
+        <div class="my-5">
           <label for="name" class="text-gray-200 text-lg">Nom d'utilisateur</label>
           <div class="flex items-center justify-between">
             <input type="text" placeholder="3 caractères minimum" id="name" autocomplete="off" class="w-full focus:outline-none placeholder:text-gray-400 text-gray-200 bg-[#212022]">
-            <img src="check.svg" alt="" class="p-1 size-10">
+            <img src="check.svg" alt="" class="icone-verif hidden p-1 size-10">
           </div>
           <hr class="border-gray-400">
-          <p class="errorName text-red-400 text-sm mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, impedit?</p>
+          <p class="error-msg hidden text-red-400 text-sm mt-2">Choisissez un pseudo contenant au moins 3 caractères</p>
         </div>
-        <div class="my-4">
+
+        <div class="my-5">
           <label for="email" class="text-gray-200 text-lg">Email</label>
           <div class="flex items-center justify-between">
             <input type="email" placeholder="Votre email" id="email" autocomplete="off" class="w-full focus:outline-none placeholder:text-gray-400 text-gray-200 bg-[#212022]">
-            <img src="check.svg" alt="" class="p-1 size-10">
+            <img src="check.svg" alt="" class="icone-verif hidden p-1 size-10">
           </div>
           <hr class="border-gray-400">
-          <p class="errorName text-red-400 text-sm mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia fuga aliquam vero.</p>
+          <p class="error-msg hidden text-red-400 text-sm mt-2">Entrez un email valide.</p>
         </div>
-        <div class="my-4">
+
+        <div class="my-5">
           <label for="mdp" class="text-gray-200 text-lg">Mot de passe</label>
           <div class="flex items-center justify-between">
             <input type="password" placeholder="Votre mot de passe" id="mdp" autocomplete="off" class="w-full focus:outline-none placeholder:text-gray-400 text-gray-200 bg-[#212022]">
-            <img src="check.svg" alt="" class="p-1 size-10">
+            <img src="check.svg" alt="" class="icone-verif hidden p-1 size-10">
           </div>
           <hr class="border-gray-400">
-          <p class="errorName text-gray-400 text-sm my-2">Au moins un symbole, un chiffre ainsi que 6 caractères minimum</p>
-          <div class="flex items-center justify-center space-x-2 mt-3">
-            <div>
+          <p class="error-msg text-gray-400 text-sm my-2">Au moins un symbole, un chiffre ainsi que 6 caractères minimum</p>
+          <div class="lines-group hidden items-center justify-start mx-20 space-x-2 mt-3">
+            <div class="lines invisible">
               <p class="bg-[#c95c22] w-[120px] h-1 rounded-md"></p>
               <p class="text-gray-200 text-center">faible</p>
             </div>
-            <div>
+            <div class="lines invisible">
               <p class="bg-[#f5e87a] w-[120px] h-1 rounded-md"></p>
               <p class="text-gray-200 text-center">moyen</p>
             </div>
-            <div>
+            <div class="lines invisible">
               <p class="bg-[#24dc23] w-[120px] h-1 rounded-md"></p>
               <p class="text-gray-200 text-center">fort</p>
             </div>
           </div>
         </div>
-        <div class="my-4">
+
+        <div class="my-5">
           <label for="confirmpsd" class="text-gray-200 text-lg">Confirmer le mot de passe</label>
           <div class="flex items-center justify-between">
-            <input type="text" placeholder="Confirmer votre mot de passe" id="confirmpsd" autocomplete="off" class="w-full focus:outline-none placeholder:text-gray-400 text-gray-200 bg-[#212022]">
-            <img src="check.svg" alt="" class="p-1 size-10">
+            <input type="password" placeholder="Confirmer votre mot de passe" id="confirmpsd" autocomplete="off" class="w-full focus:outline-none placeholder:text-gray-400 text-gray-200 bg-[#212022]">
+            <img src="check.svg" alt="" class="icone-verif hidden p-1 size-10">
           </div>
           <hr class="border-gray-400">
-          <p class="errorName text-red-400 text-sm mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, impedit?</p>
+          <p class="error-msg hidden text-red-400 text-sm mt-2">Rentrez le même mot de passe</p>
         </div>
-        <button type="submit" class="flex bg-[#fffcde] text-lg rounded-md px-4 py-2 mx-auto">Création du compte</button>
+
+        <button type="submit" class="flex bg-[#fffcde] text-lg rounded-md px-4 py-2 mx-auto mt-8">Création du compte</button>
+
       </form>
     </div>
   </section>
