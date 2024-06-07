@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur Mdp</title>
+    <meta name="description" content="Description here">
+    <link rel="icon" href="">
+  
+    <!-- Tailwind -->
+    <link href="../output.css" rel="stylesheet">
+  </head>
+  
+<body class="bg-black text-white">
+  <nav class="fixed top-0 w-full h-20 flex items-center bg-white border-b border-slate-600 z-10">
+    <a href="../index.html" class="ml-4 bg-slate-400 hover:bg-slate-500 rounded-full group ">
+      <svg xmlns="http://www.w3.org/2000/svg" class="size-10 pr-1 text-slate-200" viewBox="0 0 512 512"><path fill="currentColor" d="M321.94 98L158.82 237.78a24 24 0 0 0 0 36.44L321.94 414c15.57 13.34 39.62 2.28 39.62-18.22v-279.6c0-20.5-24.05-31.56-39.62-18.18"/></svg>
+    </a>
+    <h1 class="text-3xl text-black ml-4">Projet 12 - Générateur de Mdp</h1>
+  </nav>
+
+  <section class="pt-48 px-8 min-h-full">
+
+    <div class="container flex flex-col mx-auto w-full md:w-[500px]">
+      <h2 class="heading text-2xl mb-4">Votre mot de passe</h2>
+      <div class="password-container flex justify-between text-xl">
+        <p class="password-content w-full border-b">8-p3i)8wtc6BQ`v'/&Dq</p>
+        <button class="copy-btn flex-shrink-0 size-9 p-2 rounded-lg bg-gray-200">
+          <img src="copy.svg" alt="icône copier">
+        </button>
+      </div>
+      <div class="range-group flex flex-col my-[20px]">
+        <label for="range">Taille du mot de passe : 10</label>
+        <input type="range" min="4" max="20" value="10" class="h-1 mt-[14px] -red-800">
+      </div>
+      <div class="checkboxes-container space-y-3">
+        <div class="checkbox-group">
+          <input id="lowercaseChars" type="checkbox" checked />
+          <label for="lowercaseChars">Contient des caractères minuscules</label>
+        </div>
+        <div class="checkbox-group">
+          <input id="upperCaseChars" type="checkbox" checked />
+          <label for="upperCaseChars">Contient des caractères majuscules</label>
+        </div>
+        <div class="checkbox-group">
+          <input id="numbers" type="checkbox" checked />
+          <label for="numbers">Contient des nombres</label>
+        </div>
+        <div class="checkbox-group">
+          <input id="symbols" type="checkbox" checked />
+          <label for="symbols">Contient des symboles spéciaux</label>
+        </div>
+      </div>
+      <button class="generate-password-btn mx-auto mt-10 border w-[150px] py-1 rounded-md hover:bg-gray-700">Générer</button>
+      <p class="error-msg"></p>
+    </div>
+
+
+  </section>
+  <script src="projet_12.js"></script>
+</body>
+</html>
