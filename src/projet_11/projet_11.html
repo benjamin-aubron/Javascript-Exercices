@@ -1,0 +1,59 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <meta name="description" content="Description here">
+    <link rel="icon" href="">
+  
+    <!-- Tailwind -->
+    <link href="../output.css" rel="stylesheet">
+  </head>
+  
+<body class="bg-gradient-to-r from-[#11877e] to-[#39ef7e]">
+  <nav class="fixed top-0 w-full h-20 flex items-center bg-white border-b border-slate-600 z-10">
+    <a href="../index.html" class="ml-4 bg-slate-400 hover:bg-slate-500 rounded-full group ">
+      <svg xmlns="http://www.w3.org/2000/svg" class="size-10 pr-1 text-slate-200" viewBox="0 0 512 512"><path fill="currentColor" d="M321.94 98L158.82 237.78a24 24 0 0 0 0 36.44L321.94 414c15.57 13.34 39.62 2.28 39.62-18.22v-279.6c0-20.5-24.05-31.56-39.62-18.18"/></svg>
+    </a>
+    <h1 class="text-3xl ml-4">Projet 11 - Slider</h1>
+  </nav>
+
+  <section class="pt-48 px-8 min-h-full">
+
+    <div class="relative grid mx-auto bg-[#121113] w-full md:w-[500px] h-[400px] rounded-md drop-shadow overflow-hidden ">
+      <!-- overflow-hidden à rajouer -->
+      <button class="direction-btn absolute hover:bg-gray-800 p-2 pr-3 border-[1px] border-gray-200 rounded-full size-12 top-[50%] translate-y-[-50%] left-10 z-10">
+        <img src="left-chevron.svg" alt="chevron to click left" class="pointer-events-none">
+      </button>
+      <button class="direction-btn right absolute hover:bg-gray-800 p-2 pl-3 border-[1px] border-gray-200 rounded-full size-12 top-[50%] translate-y-[-50%] right-10 z-10">
+        <img src="right-chevron.svg" alt="chevron to click right" class="pointer-events-none">
+      </button>
+
+      <div class="flex flex-col items-center justify-center slide" data-active="on">
+        <img src="cat-1.jpg" alt="Cat image #1" class="rounded-full size-40">
+        <p class="text-gray-200 text-xl text-center mt-6">Slide 1</p>
+        <p class="text-gray-500 text-center">Subtitle 1</p>
+        <button class="bg-[#121113] hover:bg-gray-800 text-gray-200 shadow-white border-[1px] border-gray-400 p-1 w-[150px] mx-auto mt-6 rounded-md">Subscribe 1</button>
+      </div>
+
+      <div class="flex flex-col items-center justify-center slide" data-active="off">
+        <img src="cat-2.jpg" alt="Cat image #2" class="rounded-full size-40">
+        <p class="text-gray-200 text-xl text-center mt-6">Slide 2</p>
+        <p class="text-gray-500 text-center">Subtitle 2</p>
+        <button class="bg-[#121113] hover:bg-gray-800 text-gray-200 shadow-white border-[1px] border-gray-400 p-1 w-[150px] mx-auto mt-6 rounded-md">Subscribe 2</button>
+      </div>
+
+      <div class="flex flex-col items-center justify-center slide" data-active="off">
+        <img src="cat-3.jpg" alt="Cat image #3" class="rounded-full size-40">
+        <p class="text-gray-200 text-xl text-center mt-6">Slide 3</p>
+        <p class="text-gray-500 text-center">Subtitle 3</p>
+        <button class="bg-[#121113] hover:bg-gray-800 text-gray-200 shadow-white border-[1px] border-gray-400 p-1 w-[150px] mx-auto mt-6 rounded-md">Subscribe 3 </button>
+      </div>
+
+    
+    </div>
+
+  </section>
+  <script src="projet_11.js"></script> 
+</body>
+</html>
