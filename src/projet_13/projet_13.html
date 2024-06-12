@@ -18,12 +18,41 @@
     <h1 class="text-3xl ml-4">Projet 13 - Liste filtrable</h1>
   </nav>
 
-  <section class="pt-48 px-8 min-h-full">
+  <section class="pt-48 px-2 sm:px-8 min-h-full">
 
+    <main class="main-content mx-auto md:w-full lg:w-[980px] bg-gray-100 p-6 rounded-xl">
+      <h1 class="text-5xl p-3 font-medium text-center mb-6">Liste filtrable</h1>
+      <div class="input-control flex items-center">
+        <label for="search">
+          <img src="search.svg" alt="search icon" class="size-10 p-2 bg-white rounded-l-lg"/>
+        </label>
+        <input type="text" id="search" placeholder="Search for an user" class="bg-white p-2 rounded-r-lg focus:outline-none w-full md:w-[300px]" autocomplete="off"/>
+      </div>
 
+      <h2 class="section-title text-2xl font-bold mt-4 mb-6">Database Results</h2>
+      <div class="maintable hidden lg:flex items-center justify-between mb-2">
+        <h3 class="table-title font-bold">Name</h3>
+        <h3 class="table-title font-bold">Email</h3>
+        <h3 class="table-title font-bold">Phone</h3>
+      </div>
+      <ul class="table-results grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2 lg:gap-0">
+        <!-- <div class="table-item flex flex-col items-center space-y-3 py-4 lg:py-2 lg:flex-row lg:space-y-0 justify-between bg-gray-200 p-2 drop-shadow-md lg:drop-shadow-none rounded-md lg:rounded-none">
+          <p class="main-info flex items-center justify-start">
+            <img
+              src="https://randomuser.me/api/portraits/thumb/men/71.jpg"
+              alt="avatar picture" class="rounded-full size-10 mr-2"
+            />
+            <span> Aubert Lorenzo </span>
+          </p>
+          <p class="email">lorenzo.aubert@example.com</p>
+          <p class="phone">05-26-85-79-68</p>
+        </div> -->
+      </ul>
+    </main>
 
   </section>
 
   <script src="projet_13.js"></script>
 </body>
 </html>
+
