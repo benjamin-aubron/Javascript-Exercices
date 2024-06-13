@@ -20,6 +20,38 @@
 
   <section class="pt-48 px-8 min-h-full">
 
+    <h1 class="text-4xl md:text-5xl lg:text-6xl text-center mb-12"><span class="font-medium">Lecteur</span> personnalisé</h1>
+
+    <div class="video-container mx-auto w-fit">
+
+      <video src="video.mp4" preload="metadata" class="video">
+          <source src="video.mp4" type="video/mp4"></source>
+      </video>
+
+      <div class="controls flex flex-col bg-black h-[2px]">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div class="controls-container relative flex items-center space-x-5 bg-[#151313] p-4">
+          <button class="play-toggler">
+              <img src="play.svg" alt="play icon" class="size-5">
+          </button>
+          <button class="mute-btn">
+              <img src="unmute.svg" alt="unmunte icon" class="size-5">
+          </button>
+          <input type="range" class="volume-slider h-[2px]" min="0" max="100" value="50" step="1">
+          <p class="timer text-gray-300">
+              <span class="time-display current">00:00</span>
+              <span>/</span>
+              <span class="time-display total">00:00</span>
+          </p>
+          <button class="fullscreen-toggler absolute right-5">
+              <img src="fullscreen.svg" alt="fullscreen icon" class="size-5">
+          </button>
+        </div>
+      </div>
+
+    </div>
 
   </section>
   <script src="projet_14.js"></script>
