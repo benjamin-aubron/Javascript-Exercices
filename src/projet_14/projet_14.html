@@ -22,17 +22,17 @@
 
     <h1 class="text-4xl md:text-5xl lg:text-6xl text-center mb-12"><span class="font-medium">Lecteur</span> personnalisé</h1>
 
-    <div class="video-container mx-auto w-fit">
+    <div class="video-container max-w-[800px] mx-auto w-fit drop-shadow-lg overflow-hidden">
 
-      <video src="video.mp4" preload="metadata" class="video">
+      <video src="video.mp4" preload="metadata" class="video cursor-pointer w-full h-auto">
           <source src="video.mp4" type="video/mp4"></source>
       </video>
 
-      <div class="controls flex flex-col bg-black h-[2px]">
-        <div class="progress-bar">
-            <div class="progress"></div>
+      <div class="controls absolute flex flex-col left-0 bottom-0 w-full">
+        <div class="progress-bar bg-gray-800 h-[8px] w-full">
+            <div class="progress bg-red-700 h-[8px] scale-0 origin-left"></div>
         </div>
-        <div class="controls-container relative flex items-center space-x-5 bg-[#151313] p-4">
+        <div class="controls-container relative flex items-center space-x-5 bg-[#151313] p-4 hover:">
           <button class="play-toggler">
               <img src="play.svg" alt="play icon" class="size-5">
           </button>
@@ -52,6 +52,18 @@
       </div>
 
     </div>
+
+    <style>
+      .controls {
+        will-change: transform;
+        transform: translateY(calc(100% - 8px));
+        transition: transform 0.2s ease-out;
+        cursor: auto;
+      }
+      .video-container:hover .controls {
+        transform: translateY(0%);
+      }
+    </style>
 
   </section>
   <script src="projet_14.js"></script>
