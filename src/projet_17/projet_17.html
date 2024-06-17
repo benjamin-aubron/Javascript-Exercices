@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     <link href="../output.css" rel="stylesheet">
   </head>
   
-<body>
+<body class="bg-[#111111]">
   <nav class="fixed top-0 w-full h-20 flex items-center bg-white border-b border-slate-600 z-10">
     <a href="../index.html" class="ml-4 bg-slate-400 hover:bg-slate-500 rounded-full group ">
       <svg xmlns="http://www.w3.org/2000/svg" class="size-10 pr-1 text-slate-200" viewBox="0 0 512 512"><path fill="currentColor" d="M321.94 98L158.82 237.78a24 24 0 0 0 0 36.44L321.94 414c15.57 13.34 39.62 2.28 39.62-18.22v-279.6c0-20.5-24.05-31.56-39.62-18.18"/></svg>
@@ -18,10 +18,111 @@
     <h1 class="text-3xl ml-4">Projet 17 - Landing page animée</h1>
   </nav>
 
-  <section class="pt-48 px-8 min-h-full">
+  
+  <div class="custom-cursor"></div>
 
+  <div class="absolute flex left-[50%] -translate-x-[50%] space-x-8 pt-32 text-gray-200 text-xl">
+    <a href="#" class="relative after:absolute after:w-[20%] after:h-[1px] after:bg-gray-500 after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:hover:bg-gray-200 after:hover:w-full">Home</a>
+    <a href="#" class="relative hover:text-gray-200 after:absolute after:w-[20%] after:h-[1px] after:bg-gray-500 after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:hover:bg-gray-200 after:hover:w-full">Services</a>
+    <a href="#" class="relative hover:text-gray-200 after:absolute after:w-[20%] after:h-[1px] after:bg-gray-500 after:-bottom-1 after:left-0 after:transition-all after:duration-300 after:hover:bg-gray-200 after:hover:w-full">Features</a>
+  </div>
 
+  <section class="hero bg-[url('./projet_17/hero-background.jpg')] h-[100vh] min-h-[700px] pt-[150px] bg-center">
+    <div class="hero-content">
+      <h1 aria-label="Porsche, set free." class="relative flex justify-center mx-auto mt-20 w-fit text-[8vw] 2xl:text-7xl uppercase text-center bg-gradient-to-r from-[#999] to-[#fff] font-extrabold bg-clip-text text-transparent after:absolute after:w-[3px] after:h-full after:bg-white after:top-0 after:right-0">Porsche, set free.</h1>
+      <p class="subtitle text-center text-gray-300 font-extralight text-2xl pt-3">Lorem ipsum dolor sit amet.</p>
+    </div>
+    <a href="#discover" class="absolute left-[50%] -translate-x-[50%] bottom-10 hero-push-link flex items-center justify-center bg-black border border-[#f1f1f136] rounded-full size-[50px] p-4 -scroll-mt-20">
+      <img src="down-arrow.svg" alt="arrow down" class="pointer-events-none"/>
+    </a>
   </section>
+
+  <main class="container text-[#f1f1f1] max-w-[1100px] mx-auto overflow-x-hidden">
+    <section id="discover" class="discover-section pt-10">
+      <h2 class="font-extralight text-center text-[6vw] 2xl:text-[60px] pt-10 pb-2">Feel the <span class="font-extrabold">road</span></h2>
+      <p class="section-subtitle discover-subtitle text-center mb-10">Start today</p>
+
+      <div class="discover-content flex max-h-[500px] justify-center text-center md:text-left">
+        <div class="text-discover-content w-full md:w-[50%]">
+          <h3 class="text-[3vw] 2xl:text-[30px] font-normal mb-7">You've never experienced that.</h3>
+          <p class="px-12 md:px-0 md:pr-[70px] font-extralight">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt,
+            hic! Distinctio quisquam ullam recusandae suscipit itaque
+            assumenda numquam facilis, quod voluptas ratione repellendus esse
+            ipsum nostrum fuga vel at. Ducimus reiciendis modi nihil hic velit
+            dolorum nulla recusandae iste vero!
+          </p>
+          <a href="#contact" class="discover-link flex items-center w-fit px-3 py-[6px] border-[1px] border-[#f1f1f136] mt-10 mx-auto md:mx-0">
+            <span>Contact Us</span>
+            <img src="right-chevron.svg" alt="right chevron" class="size-5 ml-6"/>
+          </a>
+        </div>
+        <img
+          src="vertical-porsche.jpg"
+          alt="porsche car"
+          class="discover-main-img w-[50%] object-cover hidden md:flex"
+        />
+      </div>
+    </section>
+
+    <section class="side-apparition space-y-20 sm:space-y-28 mb-20 px-12">
+      <div>
+        <h2 class="font-extralight text-center text-[6vw] 2xl:text-[60px] pt-16 pb-2">Browse the models.</h2>
+        <p class="section-subtitle text-center mb-10">Pick your favorite.</p>
+      </div>
+
+      <div class="side-apparition-container flex flex-col sm:flex-row">
+        <div class="side-slide-content w-full sm:w-[35%]">
+          <h3 class="text-xl mb-6">Cayman.</h3>
+          <p class="pr-10 text-lg sm:text-xl mb-6 sm:mb-0 text-[#808080]">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            distinctio, dolorem maxime iure earum ducimus?
+          </p>
+        </div>
+        <img src="side-1.jpg" alt="porsche car"  class="max-h-[200px] object-cover w-full sm:w-[65%]"/>
+      </div>
+
+      <div class="side-apparition-container flex flex-col-reverse sm:flex-row">
+        <img src="side-2.jpg" alt="porsche car" class="max-h-[200px] object-cover w-full sm:w-[65%]"/>
+        <div class="side-slide-content sm:pl-8 w-full sm:w-[35%]">
+          <h3 class="text-xl mb-6">Panamera.</h3>
+          <p class="text-lg sm:text-xl mb-6 sm:mb-0 text-[#808080]">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            distinctio, dolorem maxime iure earum ducimus?
+          </p>
+        </div>
+      </div>
+
+      <div class="side-apparition-container flex flex-col sm:flex-row">
+        <div class="side-slide-content w-full sm:w-[35%]">
+          <h3 class="text-xl mb-6">The 911.</h3>
+          <p class="pr-10 text-lg sm:text-xl mb-6 sm:mb-0 text-[#808080]">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            distinctio, dolorem maxime iunpmre earum ducimus?
+          </p>
+        </div>
+        <img src="side-3.jpg" alt="porsche car"  class="max-h-[200px] object-cover w-full sm:w-[65%]"/>
+      </div>
+    </section>
+  </main>
+
+  <style>
+  h1::after {
+  animation: carret 1s infinite;
+  }
+  @keyframes carret {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  </style>
   <script src="projet_17.js"></script>
+
 </body>
 </html>
