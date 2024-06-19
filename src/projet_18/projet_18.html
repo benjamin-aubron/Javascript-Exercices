@@ -10,36 +10,85 @@
     <link href="../output.css" rel="stylesheet">
   </head>
   
-<body>
+<body class="bg-gradient-to-r from-[#f09819] to-[#edde5d]">
   <nav class="fixed top-0 w-full h-20 flex items-center bg-white border-b border-slate-600 z-10">
     <a href="../index.html" class="ml-4 bg-slate-400 hover:bg-slate-500 rounded-full group ">
       <svg xmlns="http://www.w3.org/2000/svg" class="size-10 pr-1 text-slate-200" viewBox="0 0 512 512"><path fill="currentColor" d="M321.94 98L158.82 237.78a24 24 0 0 0 0 36.44L321.94 414c15.57 13.34 39.62 2.28 39.62-18.22v-279.6c0-20.5-24.05-31.56-39.62-18.18"/></svg>
     </a>
-    <h1 class="text-3xl ml-4">Projet 18 - Jeu vitesse de frappe</h1>
+    <div class="text-3xl ml-4">Projet 18 - Jeu vitesse de frappe</div>
   </nav>
 
-  <section class="pt-48 pb-20 px-8 min-h-full">
-    <div class="container">
-      <div class="top-content">
-        <h1>Jeu de la frappe 🔥</h1>
-        <p class="start-info">
-          Appuyez sur <span>"Échap"</span> pour lancer / relancer une partie.
+  <section class="pt-48 pb-20 px-4 min-h-full">
+    <div class="container p-[35px] bg-black mx-auto max-w-[900px] rounded-lg text-white">
+      <div class="top-content text-center">
+        <h1 class="text-[40px] font-medium">Jeu de la frappe 🔥</h1>
+        <p class="start-info mt-3">
+          Appuyez sur <span class="p-1 bg-[#dc143c] rounded">"Échap"</span> pour lancer / relancer une partie.
         </p>
-        <div class="score-information">
-          <p class="time">
+        <div class="score-information flex justify-center my-10 gap-2">
+          <p class="time text-[#f1f1f1] bg-gradient-to-tr from-[#131313] to-[#2f2f2f] px-3 py-1 text-[20px] font-bold min-w-[150px]">
             <span>Temps</span>
             <span>60</span>
           </p>
-          <p class="score">
+          <p class="score text-[#f1f1f1] bg-gradient-to-tl from-[#131313] to-[#2f2f2f] px-3 py-1 text-[20px] font-bold min-w-[150px]">
             <span>Score :</span>
             <span>0</span>
           </p>
         </div>
       </div>
-      <textarea class="textarea-to-test"></textarea>
-      <p class="sentence-to-write"></p>
+      <textarea class="textarea-to-test bg-transparent border-[2px] border-[#333333] text-[30px] text-white w-full min-h-[200px] resize-none outline-none p-5 focus:border-[#6a6a6a]"></textarea>
+      <p class="sentence-to-write mt-3 text-[25px] min-h-[100px] relative before:content-['➡️'] before:pr-[5px]"></p>
     </div>
   </section>
+
+  <style>
+    body {
+      font-family: Roboto, Helvetica, sans-serif;
+    }
+    .score {
+      margin-left: 20px;
+    }
+    .time {
+      position: relative;
+      z-index: 1;
+    }
+    .time::before, .time::after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 5px;
+    }
+    .time.active::before {
+      background: linear-gradient(45deg, rgb(252,139,26), red);
+      animation: fading 1s ease-in-out alternate infinite;
+    }
+    .time.active::after {
+      background: linear-gradient(45deg, rgb(87,75,253), rgb(19,188,70));
+      animation: fading 1s 1s ease-in-out alternate infinite;
+    }
+    @keyframes fading {
+      to {
+        opacity: 0;
+      }
+    }
+    .textarea-to-test.active {
+      border: 1px solid greenyellow;
+    }
+    .correct {
+      color: #000;
+      background-color: #0ecf0e;
+    }
+    .wrong {
+      color: #fff;
+      background: crimson;
+      text-decoration: underline;
+    }
+  </style>
 
   <script src="projet_18.js"></script>
 </body>
