@@ -15,7 +15,7 @@
     <a href="../index.html" class="ml-4 bg-slate-400 hover:bg-slate-500 rounded-full group ">
       <svg xmlns="http://www.w3.org/2000/svg" class="size-10 pr-1 text-slate-200" viewBox="0 0 512 512"><path fill="currentColor" d="M321.94 98L158.82 237.78a24 24 0 0 0 0 36.44L321.94 414c15.57 13.34 39.62 2.28 39.62-18.22v-279.6c0-20.5-24.05-31.56-39.62-18.18"/></svg>
     </a>
-    <h1 class="text-3xl ml-4">Projet 17 - Landing page animée</h1>
+    <div class="text-3xl ml-4">Projet 17 - Landing page animée</div>
   </nav>
 
   
@@ -28,15 +28,15 @@
   </div>
 
   <section class="hero bg-[url('./projet_17/hero-background.jpg')] h-[100vh] min-h-[700px] pt-[150px] bg-center">
-    <div class="hero-content">
-      <h1 aria-label="Porsche, set free." class="relative flex justify-center mx-auto mt-20 w-fit text-[8vw] 2xl:text-7xl uppercase text-center bg-gradient-to-r from-[#999] to-[#fff] font-extrabold bg-clip-text text-transparent after:absolute after:w-[3px] after:h-full after:bg-white after:top-0 after:right-0">Porsche, set free.</h1>
-      <p class="subtitle text-center text-gray-300 font-extralight text-2xl pt-3">Lorem ipsum dolor sit amet.</p>
+    <div class="hero-content flex flex-col items-center mt-20">
+      <h1 aria-label="Porsche, set free." class=""></h1>
+      <p class="subtitle text-center text-gray-300 font-extralight text-2xl pt-3 opacity-0 transition-opacity duration-1000">Lorem ipsum dolor sit amet.</p>
     </div>
-    <a href="#discover" class="absolute left-[50%] -translate-x-[50%] bottom-10 hero-push-link flex items-center justify-center bg-black border border-[#f1f1f136] rounded-full size-[50px] p-4 -scroll-mt-20">
+    <a href="#discover" class="absolute left-[50%] -translate-x-[50%] bottom-10 hero-push-link flex items-center justify-center bg-black border border-[#f1f1f136] rounded-full size-[50px] p-4 -scroll-mt-20 opacity-0 transition-opacity duration-1000">
       <img src="down-arrow.svg" alt="arrow down" class="pointer-events-none"/>
     </a>
   </section>
-
+ 
   <main class="container text-[#f1f1f1] max-w-[1100px] mx-auto overflow-x-hidden">
     <section id="discover" class="discover-section pt-10">
       <h2 class="font-extralight text-center text-[6vw] 2xl:text-[60px] pt-10 pb-2">Feel the <span class="font-extrabold">road</span></h2>
@@ -103,24 +103,114 @@
         </div>
         <img src="side-3.jpg" alt="porsche car"  class="max-h-[200px] object-cover w-full sm:w-[65%]"/>
       </div>
-    </section>
-  </main>
-
+      </section>
+      </main>
+      
   <style>
-  h1::after {
-  animation: carret 1s infinite;
-  }
-  @keyframes carret {
-    0% {
-      opacity: 1;
+    html {
+      cursor: none;
+      }
+    a, button, input, label, textarea, img {
+      cursor: none;
+      }
+    /* Custom cursor */
+    .custom-cursor {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid #e3e3e3c1;
+      position: fixed;
+      z-index: 100;
+      pointer-events: none;
+    } 
+    .custom-cursor::after {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid #111;
+      background: #f4f4f4;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
     }
-    50% {
+    @media (pointer:coarse) {
+      .custom-cursor {
+        display: none;
+      }
+    }
+    h1 {
+    font-size: clamp(24px, 8vw, 80px);
+    display: inline-block;
+    font-weight: 800;
+    color: #f0f0f0;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #999, #fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+    }
+    h1::after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 3px;
+      background: #ebebeb;
+      right: -10px;
+      top: 0;
+      animation: carret 1s infinite;
+    }
+    @keyframes carret {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .subtitle.active {
+    opacity: 1;
+    }
+    .hero-push-link.active {
+    opacity: 1;
+    }
+    /* Animations */
+    h2,
+    .section-subtitle,
+    .text-discover-content > *,
+    .discover-main-img {
       opacity: 0;
+      transform: translateY(-5px);
+      transition: 
+      opacity 0.5s 0.3s ease-out,
+      transform 0.5s 0.3s ease-out;
     }
-    100% {
+    h2.active,
+    .section-subtitle.active,
+    .text-discover-content > *.active ,
+    .discover-main-img.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .side-apparition-container {
+      transform: translateX(30px) skew(20deg);
+      opacity: 0;
+      transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    }
+    .side-apparition-container:nth-child(odd) {
+      transform: translateX(-30px) skew(-20deg);
+    }
+    .side-apparition-container.active {
+      transform: translateX(0px) skew(0deg);
       opacity: 1;
     }
-  }
   </style>
   <script src="projet_17.js"></script>
 
