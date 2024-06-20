@@ -62,6 +62,32 @@ function handleOperators(e) {
   }
 }
 
+
+const decimalButton = document.querySelector("[data-action='.']")
+
+decimalButton.addEventListener("click", handleDecimal);
+
+function handleDecimal (){
+  if(!calculatorData.calculation) return;
+
+  let lastSetOfNumbers = "";
+
+  for(let i = calculatorData.calculation.length - 1; i >= 0; i--) {
+    if(/[\/+*-]/.test(calculatorData.calculation[i])){
+      break;
+    }
+    else {
+      lastSetOfNumbers += calculatorData.calculation[i];
+    }
+  }
+  
+  if(!lastSetOfNumbers.includes(".")) {
+    calculatorData.calculation += ".";
+    resultDisplay.textContent = calculatorData.calculation;
+  }
+}
+
+
 const equalBtn = document.querySelector("[data-action='=']");
 
 equalBtn.addEventListener("click", handleEqualBtn);
