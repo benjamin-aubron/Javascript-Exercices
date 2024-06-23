@@ -2005,6 +2005,10 @@ video {
   outline-offset: 2px;
 }
 
+.outline {
+  outline-style: solid;
+}
+
 .outline-\[2px\] {
   outline-width: 2px;
 }
